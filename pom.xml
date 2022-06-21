@@ -43,12 +43,7 @@
         <dependency>
             <groupId>io.personium</groupId>
             <artifactId>personium-ex-base</artifactId>
-            <version>1.4.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mozilla</groupId>
-            <artifactId>rhino</artifactId>
-            <version>1.7R3</version>
+            <version>1.4.6</version>
         </dependency>
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
@@ -56,11 +51,19 @@
             <version>1.1</version>
         </dependency>
     </dependencies>
+
     <repositories>
         <repository>
-            <id>personium.io</id>
-            <name>Personium Repository</name>
-            <url>http://personium.io/mvnrepo</url>
+            <id>snapshots</id>
+            <name>Nexus Snapshots Repository</name>
+            <layout>default</layout>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
     </repositories>
 
@@ -68,7 +71,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.7.0</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -76,22 +79,6 @@
                     <debug>true</debug>
                     <optimize>false</optimize>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <finalName>${final.name}</finalName>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
