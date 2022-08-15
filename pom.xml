@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.personium</groupId>
     <artifactId>personium-ex-test</artifactId>
-    <version>1.4.3</version>
+    <version>1.5.0-SNAPSHOT</version>
     <name>personium-ex-test</name>
     <packaging>jar</packaging>
     <licenses>
@@ -15,7 +15,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <profiles>
@@ -43,7 +43,7 @@
         <dependency>
             <groupId>io.personium</groupId>
             <artifactId>personium-ex-base</artifactId>
-            <version>1.4.6</version>
+            <version>1.5.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
